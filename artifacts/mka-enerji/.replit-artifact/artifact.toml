@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "MKA Enerji"
+version = "1.0.0"
+id = "artifacts/mka-enerji"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20615
+
+[services.development]
+run = "pnpm --filter @workspace/mka-enerji run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mka-enerji", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mka-enerji/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20615"
+BASE_PATH = "/"
