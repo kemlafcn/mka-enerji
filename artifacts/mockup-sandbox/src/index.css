@@ -183,3 +183,30 @@
     pointer-events: none;
   }
 }
+@keyframes fadeVideo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.45;
+  }
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #031124 !important;
+  overflow-x: hidden;
+}
+
+html {
+  overscroll-behavior-y: none;
+}
+
+body {
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
