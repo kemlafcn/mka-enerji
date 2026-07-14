@@ -3,12 +3,12 @@ import { ArrowRight, Sun, Zap, TowerControl, Cable, Battery, Cpu } from "lucide-
 import { useLanguage } from "@/context/LanguageContext";
 const icons = [Sun, Zap, TowerControl, Cable, Battery, Cpu];
 const images = [
-  "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1542338106-dd3e6e8e895c?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1473308822086-710304d7d30c?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+  "images/services/ges.jpg",
+  "images/services/og-ag.jpg",
+  "images/services/trafo.jpg",
+  "images/services/enh.jpg",
+  "images/services/depolama.jpg",
+  "images/services/scada.jpg",
 ];
 export default function Services() {
  const { t, isRTL } = useLanguage();

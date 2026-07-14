@@ -355,3 +355,26 @@
     inset: -1px;
   }
 }
+html,
+body,
+#root,
+button,
+input,
+textarea,
+select,
+a,
+p,
+span,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", "Arial", "Tahoma", sans-serif !important;
+}
+[dir="rtl"],
+[lang="ar"] {
+  font-size: inherit;
+}

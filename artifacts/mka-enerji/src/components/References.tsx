@@ -1,4 +1,64 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-export default function References(){const {t}=useLanguage();return <section id="references" className="py-24 bg-gray-100 border-t border-gray-200 overflow-hidden"><div className="container mx-auto px-4 text-center mb-12"><span className="font-display font-bold text-amber uppercase tracking-widest text-sm">{t.refs.label}</span><h2 className="font-display font-black text-3xl md:text-5xl text-navy-darker mt-4">{t.refs.title}</h2></div><div className="relative flex w-full overflow-hidden"><motion.div className="flex whitespace-nowrap gap-6 items-center px-6" animate={{x:["0%","-50%"]}} transition={{repeat:Infinity,ease:"linear",duration:28}}>{[...Array(2)].map((_,i)=><React.Fragment key={i}>{["HUAWEI","SUNGROW","SOLIS","LONGi","TRINA SOLAR","SCHNEIDER","ABB","ASTOR"].map((brand)=><div key={`${i}-${brand}`} className="min-w-[220px] h-24 bg-white border border-gray-200 rounded-2xl shadow-sm flex items-center justify-center grayscale hover:grayscale-0 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"><span className="font-display font-black text-2xl text-gray-400 hover:text-navy-darker tracking-tight">{brand}</span></div>)}</React.Fragment>)}</motion.div></div></section>}
+
+const brands = [
+  { name: "Huawei", logo: "/images/brands/huaweı.jpg" },
+  { name: "Sungrow", logo: "/images/brands/sungrow.jpg" },
+  { name: "Solis", logo: "/images/brands/solis.jpg" },
+  { name: "LONGi", logo: "/images/brands/longi.jpg" },
+  { name: "Trina Solar", logo: "/images/brands/trina.jpg" },
+  {
+    name: "Schneider Electric",
+    logo: "/images/brands/schneider.jpg",
+  },
+  { name: "ABB", logo: "/images/brands/abb.jpg" },
+  { name: "ASTOR", logo: "/images/brands/astor.jpg" },
+];
+
+export default function References() {
+  const { t } = useLanguage();
+
+  const duplicatedBrands = [...brands, ...brands];
+
+  return (
+    <section
+      id="references"
+      className="py-24 bg-gray-100 border-t border-gray-200 overflow-hidden"
+    >
+      <div className="container mx-auto px-4 text-center mb-12">
+        <span className="font-bold text-amber uppercase tracking-widest text-sm">
+          {t.refs.label}
+        </span>
+
+        <h2 className="font-black text-3xl md:text-5xl text-navy-darker mt-4">
+          {t.refs.title}
+        </h2>
+      </div>
+
+      <div className="relative w-full overflow-hidden">
+        <motion.div
+          className="flex gap-6 items-center w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            ease: "linear",
+            duration: 28,
+          }}
+        >
+{duplicatedBrands.map((brand, index) => (
+  <div
+    key={`${brand.name}-${index}`}
+    className="w-[220px] h-28 shrink-0 bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden"
+  >
+    <img
+      src={brand.logo}
+      alt={brand.name}
+      className="w-full h-full object-contain p-3"
+    />
+  </div>
+))}
+</motion.div>
+</div>
+</section>
+);
+}

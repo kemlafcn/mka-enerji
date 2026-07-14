@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import FeaturesBar from "./components/FeaturesBar";
 import LoadingScreen from "./components/LoadingScreen";
 import { Navbar } from "./components/navbar";
 import Hero from "./components/Hero";
@@ -14,8 +15,12 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+
     const timer = window.setTimeout(() => {
       setLoading(false);
+      window.scrollTo(0, 0);
     }, 2200);
 
     return () => window.clearTimeout(timer);
@@ -25,22 +30,19 @@ export default function App() {
     <>
       <LoadingScreen loading={loading} />
 
-      {!loading && (
-        <>
-          <Navbar />
+      <Navbar />
 
-          <main>
-            <Hero />
-            <About />
-            <Services />
-            <Projects />
-            <References />
-            <Contact />
-          </main>
+      <main>
+        <Hero />
+        <FeaturesBar />
+        <About />
+        <Services />
+        <Projects />
+        <References />
+        <Contact />
+      </main>
 
-          <Footer />
-        </>
-      )}
+      <Footer />
     </>
   );
 }
