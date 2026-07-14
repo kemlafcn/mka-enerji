@@ -7,9 +7,9 @@ const languages: {
   label: string;
   flag: string;
 }[] = [
-  { code: "tr", label: "TR", flag: "/images/flags/tr.svg.jpg" },
-  { code: "en", label: "EN", flag: "/images/flags/gb.svg.jpg" },
-  { code: "ar", label: "AR", flag: "/images/flags/sa.svg.jpg" },
+  { code: "tr", label: "TR", flag: `${import.meta.env.BASE_URL}images/flags/tr.svg.jpg` },
+  { code: "en", label: "EN", flag: `${import.meta.env.BASE_URL}images/flags/gb.svg.jpg` },
+  { code: "ar", label: "AR", flag: `${import.meta.env.BASE_URL}images/flags/sa.svg.jpg` },
 ];
 
 export default function LanguageSwitcher() {

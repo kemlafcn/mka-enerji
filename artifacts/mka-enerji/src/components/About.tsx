@@ -11,9 +11,9 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 
 const images = [
-  "/images/about-1.jpg",
-  "/images/about-2.jpg",
-  "/images/about-3.jpg",
+  `${import.meta.env.BASE_URL}images/about-1.jpg`,
+  `${import.meta.env.BASE_URL}images/about-2.jpg`,
+  `${import.meta.env.BASE_URL}images/about-3.jpg`,
 ];
 
 const containerVariants: Variants = {

@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 
 const brands = [
-  { name: "Huawei", logo: "/images/brands/huaweı.jpg" },
-  { name: "Sungrow", logo: "/images/brands/sungrow.jpg" },
-  { name: "Solis", logo: "/images/brands/solis.jpg" },
-  { name: "LONGi", logo: "/images/brands/longi.jpg" },
-  { name: "Trina Solar", logo: "/images/brands/trina.jpg" },
+  { name: "Huawei", logo: `${import.meta.env.BASE_URL}images/brands/huaweı.jpg` },
+  { name: "Sungrow", logo: `${import.meta.env.BASE_URL}images/brands/sungrow.jpg` },
+  { name: "Solis", logo: `${import.meta.env.BASE_URL}images/brands/solis.jpg` },
+  { name: "LONGi", logo: `${import.meta.env.BASE_URL}images/brands/longi.jpg` },
+  { name: "Trina Solar", logo: `${import.meta.env.BASE_URL}images/brands/trina.jpg` },
   {
     name: "Schneider Electric",
-    logo: "/images/brands/schneider.jpg",
+    logo: `${import.meta.env.BASE_URL}images/brands/schneider.jpg`,
   },
-  { name: "ABB", logo: "/images/brands/abb.jpg" },
-  { name: "ASTOR", logo: "/images/brands/astor.jpg" },
+  { name: "ABB", logo: `${import.meta.env.BASE_URL}images/brands/abb.jpg` },
+  { name: "ASTOR", logo: `${import.meta.env.BASE_URL}images/brands/astor.jpg` },
 ];
 
 export default function References() {

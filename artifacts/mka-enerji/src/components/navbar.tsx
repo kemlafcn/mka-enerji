@@ -78,7 +78,7 @@ export function Navbar() {
             className="relative z-50 flex items-center"
           >
             <img
-              src="/images/MKA.jpg"
+              src={`${import.meta.env.BASE_URL}images/MKA.jpg`}
               alt="MKA Enerji"
               className="h-14 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
             />

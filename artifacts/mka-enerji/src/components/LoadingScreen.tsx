@@ -24,7 +24,7 @@ export default function LoadingScreen({
             className="text-center"
           >
             <img
-              src="/images/MKA.jpg"
+              src={`${import.meta.env.BASE_URL}images/MKA.jpg`}
               alt="MKA Enerji"
               className="mx-auto h-28 md:h-32 w-auto object-contain mb-8"
             />

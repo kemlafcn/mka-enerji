@@ -20,7 +20,7 @@ export default function Hero() {
           playsInline
           preload="auto"
         >
-          <source src="/hero.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}hero.mp4`} type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-gradient-to-r from-[#031124]/85 via-[#031124]/55 to-transparent" />

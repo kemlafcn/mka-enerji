@@ -15,7 +15,7 @@ export default function Footer() {
           <div>
             <a href="#home" className="inline-flex items-center mb-5">
               <img
-                src="/images/MKA.jpg"
+                src={`${import.meta.env.BASE_URL}images/MKA.jpg`}
                 alt="MKA Enerji"
                 className="h-32 md:h-40 w-auto object-contain"
               />
