@@ -136,7 +136,7 @@ export default function About() {
               href="#services"
               className="mt-9 inline-flex items-center gap-2 font-display text-sm font-black uppercase tracking-wide text-[#031124] transition-colors hover:text-amber"
             >
-              Hizmetlerimizi İnceleyin
+              {t.about.servicesButton}
               <ArrowUpRight className="h-5 w-5" />
             </motion.a>
           </motion.div>

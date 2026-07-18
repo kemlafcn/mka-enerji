@@ -4,43 +4,25 @@ import {
   HardHat,
   Leaf,
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
-const features = [
-  {
-    icon: ShieldCheck,
-    title: "GÜVENİLİR",
-    description: "Kaliteli ve sürdürülebilir çözümler sunuyoruz.",
-  },
-  {
-    icon: Users,
-    title: "UZMAN KADRO",
-    description: "Deneyimli mühendis ve teknik ekibimizle yanınızdayız.",
-  },
-  {
-    icon: HardHat,
-    title: "ANAHTAR TESLİM",
-    description: "Mühendislik, tedarik ve uygulama tek elden yönetilir.",
-  },
-  {
-    icon: Leaf,
-    title: "SÜRDÜRÜLEBİLİR",
-    description: "Gelecek nesillere daha temiz bir dünya bırakıyoruz.",
-  },
-];
+const icons = [ShieldCheck, Users, HardHat, Leaf];
 
 export default function FeaturesBar() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative z-20 bg-white border-b border-gray-200">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
+          {t.features.map((feature, index) => {
+            const Icon = icons[index];
 
             return (
               <div
-                key={feature.title}
+                key={index}
                 className={`flex items-center gap-4 px-6 py-8 ${
-                  index !== features.length - 1
+                  index !== t.features.length - 1
                     ? "lg:border-r lg:border-gray-200"
                     : ""
                 }`}

@@ -48,7 +48,7 @@ export default function Hero() {
               href="#about"
               className="bg-amber text-navy-darker hover:bg-white font-display font-black text-sm md:text-base px-9 py-5 rounded-lg text-center uppercase tracking-wide transition-all flex items-center justify-center group"
             >
-              HAKKIMIZDA
+              {t.hero.aboutButton}
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
